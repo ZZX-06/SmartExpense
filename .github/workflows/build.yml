@@ -17,10 +17,6 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
-      - name: List project info
-        run: |
-          xcodebuild -list -project SmartExpense.xcodeproj
-
       - name: Build
         run: |
           xcodebuild \
@@ -35,7 +31,8 @@ jobs:
             PROVISIONING_PROFILE_SPECIFIER="" \
             DEVELOPMENT_TEAM="" \
             SWIFT_VERSION=5.0 \
-            build 2>&1 | tail -50
+            ASSETCATALOG_COMPILER_APPICON_NAME="" \
+            build 2>&1 | tail -80
 
       - name: Package IPA
         run: |
@@ -45,9 +42,10 @@ jobs:
             mkdir -p Payload
             cp -R "$APP_PATH" Payload/
             zip -r SmartExpense.ipa Payload/
-            echo "IPA created: $(ls -la SmartExpense.ipa)"
+            echo "IPA created"
+            ls -la SmartExpense.ipa
           else
-            echo "Searching for app..."
+            echo "ERROR: App not found"
             find ~/Library/Developer/Xcode/DerivedData -name "SmartExpense.app" -type d 2>/dev/null
           fi
 
@@ -56,4 +54,3 @@ jobs:
         with:
           name: SmartExpense-IPA
           path: SmartExpense.ipa
-        continue-on-error: true

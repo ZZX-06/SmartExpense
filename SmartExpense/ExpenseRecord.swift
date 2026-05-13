@@ -1,7 +1,6 @@
 import Foundation
-import CoreData
 
-struct ExpenseRecord: Identifiable {
+struct ExpenseRecord: Identifiable, Codable {
     var id: UUID
     var amount: Double
     var type: ExpenseType
@@ -42,47 +41,11 @@ struct ExpenseRecord: Identifiable {
     }
 }
 
-enum ExpenseType: String, CaseIterable {
+enum ExpenseType: String, CaseIterable, Codable {
     case income = "收入"
     case expense = "支出"
 
     var displayName: String {
         return rawValue
-    }
-}
-
-extension ExpenseRecord {
-    func toEntity(context: NSManagedObjectContext) -> ExpenseEntity {
-        let entity = ExpenseEntity(context: context)
-        entity.id = id
-        entity.amount = amount
-        entity.type = type.rawValue
-        entity.category = category
-        entity.categoryIcon = categoryIcon
-        entity.categoryColor = categoryColor
-        entity.merchant = merchant
-        entity.note = note
-        entity.date = date
-        entity.imageData = imageData
-        entity.createdAt = createdAt
-        entity.updatedAt = updatedAt
-        return entity
-    }
-
-    static func from(entity: ExpenseEntity) -> ExpenseRecord {
-        ExpenseRecord(
-            id: entity.id ?? UUID(),
-            amount: entity.amount,
-            type: ExpenseType(rawValue: entity.type ?? "支出") ?? .expense,
-            category: entity.category ?? "其他",
-            categoryIcon: entity.categoryIcon ?? "questionmark.circle",
-            categoryColor: entity.categoryColor ?? "#007AFF",
-            merchant: entity.merchant,
-            note: entity.note,
-            date: entity.date ?? Date(),
-            imageData: entity.imageData,
-            createdAt: entity.createdAt ?? Date(),
-            updatedAt: entity.updatedAt ?? Date()
-        )
     }
 }

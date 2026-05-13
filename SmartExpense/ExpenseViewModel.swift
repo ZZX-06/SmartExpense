@@ -17,7 +17,7 @@ class ExpenseViewModel: ObservableObject {
     @Published var selectedImage: UIImage?
     @Published var dateRange: DateRange = .all
 
-    private let persistence = PersistenceController.shared
+    private let storage = StorageService.shared
 
     enum DateRange: String, CaseIterable {
         case today = "今天"
@@ -31,7 +31,7 @@ class ExpenseViewModel: ObservableObject {
     }
 
     func loadRecords() {
-        records = persistence.fetchRecords()
+        records = storage.loadRecords()
     }
 
     var filteredRecords: [ExpenseRecord] {
@@ -94,7 +94,8 @@ class ExpenseViewModel: ObservableObject {
             imageData: selectedImage?.jpegData(compressionQuality: 0.8)
         )
 
-        persistence.saveRecord(record)
+        records.insert(record, at: 0)
+        storage.saveRecords(records)
         loadRecords()
         resetForm()
     }
@@ -114,12 +115,16 @@ class ExpenseViewModel: ObservableObject {
         updatedRecord.imageData = selectedImage?.jpegData(compressionQuality: 0.8)
         updatedRecord.updatedAt = Date()
 
-        persistence.updateRecord(updatedRecord)
+        if let index = records.firstIndex(where: { $0.id == record.id }) {
+            records[index] = updatedRecord
+        }
+        storage.saveRecords(records)
         loadRecords()
     }
 
     func deleteRecord(_ record: ExpenseRecord) {
-        persistence.deleteRecord(record)
+        records.removeAll { $0.id == record.id }
+        storage.saveRecords(records)
         loadRecords()
     }
 

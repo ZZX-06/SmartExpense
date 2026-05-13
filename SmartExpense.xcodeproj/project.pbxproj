@@ -20,13 +20,11 @@
 		7565F3B92B8C9E3A00000001 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3B82B8C9E3A00000001 /* ImagePicker.swift */; };
 		7565F3BB2B8C9E3A00000001 /* ExpenseRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3BA2B8C9E3A00000001 /* ExpenseRecord.swift */; };
 		7565F3BD2B8C9E3A00000001 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3BC2B8C9E3A00000001 /* Category.swift */; };
-		7565F3BF2B8C9E3A00000001 /* ExpenseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3BE2B8C9E3A00000001 /* ExpenseEntity.swift */; };
-		7565F3C12B8C9E3A00000001 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3C02B8C9E3A00000001 /* PersistenceController.swift */; };
+		7565F3BF2B8C9E3A00000001 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3BE2B8C9E3A00000001 /* StorageService.swift */; };
 		7565F3C32B8C9E3A00000001 /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3C22B8C9E3A00000001 /* OCRService.swift */; };
 		7565F3C52B8C9E3A00000001 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3C42B8C9E3A00000001 /* ExpenseViewModel.swift */; };
 		7565F3C72B8C9E3A00000001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3C62B8C9E3A00000001 /* Extensions.swift */; };
 		7565F3D02B8C9E3B00000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7565F3CF2B8C9E3B00000001 /* Assets.xcassets */; };
-		7565F3D22B8C9E3C00000001 /* SmartExpense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7565F3D12B8C9E3C00000001 /* SmartExpense.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,14 +42,12 @@
 		7565F3B82B8C9E3A00000001 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		7565F3BA2B8C9E3A00000001 /* ExpenseRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRecord.swift; sourceTree = "<group>"; };
 		7565F3BC2B8C9E3A00000001 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		7565F3BE2B8C9E3A00000001 /* ExpenseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseEntity.swift; sourceTree = "<group>"; };
-		7565F3C02B8C9E3A00000001 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		7565F3BE2B8C9E3A00000001 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		7565F3C22B8C9E3A00000001 /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
 		7565F3C42B8C9E3A00000001 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		7565F3C62B8C9E3A00000001 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7565F3C82B8C9E3A00000001 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7565F3CF2B8C9E3B00000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7565F3D12B8C9E3C00000001 /* SmartExpense.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartExpense.xcdatamodeld; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +77,12 @@
 				7565F3B82B8C9E3A00000001 /* ImagePicker.swift */,
 				7565F3BA2B8C9E3A00000001 /* ExpenseRecord.swift */,
 				7565F3BC2B8C9E3A00000001 /* Category.swift */,
-				7565F3BE2B8C9E3A00000001 /* ExpenseEntity.swift */,
-				7565F3C02B8C9E3A00000001 /* PersistenceController.swift */,
+				7565F3BE2B8C9E3A00000001 /* StorageService.swift */,
 				7565F3C22B8C9E3A00000001 /* OCRService.swift */,
 				7565F3C42B8C9E3A00000001 /* ExpenseViewModel.swift */,
 				7565F3C62B8C9E3A00000001 /* Extensions.swift */,
 				7565F3C82B8C9E3A00000001 /* Info.plist */,
 				7565F3CF2B8C9E3B00000001 /* Assets.xcassets */,
-				7565F3D12B8C9E3C00000001 /* SmartExpense.xcdatamodeld */,
 			);
 			name = SmartExpense;
 			sourceTree = "<group>";
@@ -184,12 +178,10 @@
 				7565F3B92B8C9E3A00000001 /* ImagePicker.swift in Sources */,
 				7565F3BB2B8C9E3A00000001 /* ExpenseRecord.swift in Sources */,
 				7565F3BD2B8C9E3A00000001 /* Category.swift in Sources */,
-				7565F3BF2B8C9E3A00000001 /* ExpenseEntity.swift in Sources */,
-				7565F3C12B8C9E3A00000001 /* PersistenceController.swift in Sources */,
+				7565F3BF2B8C9E3A00000001 /* StorageService.swift in Sources */,
 				7565F3C32B8C9E3A00000001 /* OCRService.swift in Sources */,
 				7565F3C52B8C9E3A00000001 /* ExpenseViewModel.swift in Sources */,
 				7565F3C72B8C9E3A00000001 /* Extensions.swift in Sources */,
-				7565F3D22B8C9E3C00000001 /* SmartExpense.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

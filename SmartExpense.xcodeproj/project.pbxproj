@@ -110,7 +110,7 @@
 			buildPhases = (
 				7565F3A02B8C9E3900000001 /* Frameworks */,
 				7565F3A12B8C9E3A00000001 /* Sources */,
-				7565F3CF2B8C9E3B00000001 /* Resources */,
+				7565F3D32B8C9E3C00000001 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -156,7 +156,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7565F3CF2B8C9E3B00000001 /* Resources */ = {
+		7565F3D32B8C9E3C00000001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,7 +203,6 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
